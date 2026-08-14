@@ -40,3 +40,17 @@ Work completed
 Personal lessons
 
 The health endpoint provides a tool to confirm backend is reachable by verifying request mapping, successful status code, JSON content type, and response fields without starting a server.
+
+## 2026-08-14 - PostgreSQL development environment
+
+### Work Completed
+- Configured PostgreSQL 18.4 as the 1st Docker Compose service
+- Has persistent Docker volume for database
+- Added PostgreSQL health check
+- Confirmed database connection and user with SQL
+- Confirmed installed PostgreSQL version.
+
+### Verification
+```sql
+SELECT current_database(), current_user;
+SELECT version();
