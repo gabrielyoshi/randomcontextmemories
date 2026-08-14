@@ -11,22 +11,44 @@ A private, full-stack digital memory journal that helps users save, organize, se
 - Organize entries with tags and collections
 - Search saved content
 - Maintain private user accounts
+- Selectively export/share user-controlled context
 
 ## Screenshots
 
-TBD
+TBD as user interface development proceeds
 
 ## Technology Stack
 
 Frontend, backend, database, storage, testing, and deployment (TBD)
 
+### Implemented
+- Java 21
+- Spring Boot
+- Maven
+- PostgreSQL 18.4
+- Docker and Docker Compose
+- JUnit
+- Spring MockMvc
+- Git and GitHub
+
+### Planned
+
+- React
+- TypeScript
+- Object storage
+- Continuous integration and deployment
+
 ## Architecture
 
-TBD with diagrams
+Uses monorepo containing backend, frontend, infrastructure config, and documentation
 
 ## Getting Started
 
 Requirements and install instructions
+
+- Java 21 or later
+- Docker Desktop
+- Git
 
 ## Testing
 
@@ -34,11 +56,15 @@ Running backend and frontend tests.
 
 ## API Documentation
 
-Link to API documentation
+Current API documentation is available in ```docs/api.md```
+
+Implemented endpoint:
+
+```GET /api/health```
 
 ## Project Status
 
-Developing root project structure
+In active development
 
 Completed:
 - Established monorepo for backend, frontend, documentation, and infrastructure
@@ -46,17 +72,33 @@ Completed:
 - Verified Spring application with JUnit
 - Implemented GET /api/health
 - Added a focused web-layer test that verifies the endpoint's HTTP status, content type, and JSON response
+- Configured PostgreSQL 18.4 as Docker Compose service
+- Added environment-based local database configuration
+- Added persistent PostgreSQL volume and container health check
+- Verified database, application user, authentication, and SQL execution
 
 Next:
-- Configure PostgreSQL for local developement
+
+- Connect Spring Boot to PostgreSQL through JDBC and Spring Data JPA
+- Introduce version-controlled database migrations
 - Add first persistent domain entity
 
 ## Roadmap
+Planned milestones include:
+
+- Persistent entries containing text and links
+- Image and video attachments
+- Tags and collections
+- User authentication and authorization
+- Full-text search
+- A React and TypeScript frontend
+- User-controlled export and sharing
+- Optional integrations that let users provide selected memories as context to AI tools
 
 Planning to integrate tags and collections for easy sharing with users AI subscriptions for better chat context
 
 ## Design Decisions
 
-TBD
+Architectural decisions documented here ```docs/decisions/```
 
 ## License
