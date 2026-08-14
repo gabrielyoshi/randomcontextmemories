@@ -17,7 +17,7 @@ Routine tasks are tracked on GitHub Issues and Git commits
 
 ### Lessons and decisions
 
-A monorepo keeps the frontend, backend, infrastructure configuration, and documentation together. This structure makes the application easier to run and review. 
+A monorepo keeps the frontend, backend, infrastructure configuration, and documentation together. This structure makes the application easier to run and review.
 
 ### Next step
 
@@ -44,6 +44,7 @@ The health endpoint provides a tool to confirm backend is reachable by verifying
 ## 2026-08-14 - PostgreSQL development environment
 
 ### Work Completed
+
 - Configured PostgreSQL 18.4 as the 1st Docker Compose service
 - Has persistent Docker volume for database
 - Added PostgreSQL health check
@@ -51,6 +52,8 @@ The health endpoint provides a tool to confirm backend is reachable by verifying
 - Confirmed installed PostgreSQL version.
 
 ### Verification
+
 ```sql
 SELECT current_database(), current_user;
 SELECT version();
+```
