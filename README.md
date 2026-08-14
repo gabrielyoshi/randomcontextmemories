@@ -40,6 +40,17 @@ Link to API documentation
 
 Developing root project structure
 
+Completed:
+- Established monorepo for backend, frontend, documentation, and infrastructure
+- Initialized a Java and Spring Boot backend using Maven
+- Verified Spring application with JUnit
+- Implemented GET /api/health
+- Added a focused web-layer test that verifies the endpoint's HTTP status, content type, and JSON response
+
+Next:
+- Configure PostgreSQL for local developement
+- Add first persistent domain entity
+
 ## Roadmap
 
 Planning to integrate tags and collections for easy sharing with users AI subscriptions for better chat context
