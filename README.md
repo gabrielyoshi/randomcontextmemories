@@ -19,7 +19,13 @@ TBD as user interface development proceeds
 
 ## Technology Stack
 
-Frontend, backend, database, storage, testing, and deployment (TBD)
+Frontend, backend, database, storage, testing, and deployment
+- Backend: Java 21, Spring Boot, Spring Web MVC
+- Persistence: Spring Data JPA and Hibernate
+- Database: PostgreSQL 18
+- Infrastructure: Docker Compose
+- Build and testing: Maven, JUnit, and MockMvc
+- Frontend, object storage, and deployment: TBD
 
 ### Implemented
 - Java 21
@@ -30,6 +36,10 @@ Frontend, backend, database, storage, testing, and deployment (TBD)
 - JUnit
 - Spring MockMvc
 - Git and GitHub
+- Configured PostgreSQL for local development with Docker Compose
+- Connected Spring Boot to PostgreSQL through Spring Data JPA
+- Configured database credentials through environment variables
+- Verified PostgreSQL connection through HikariCP
 
 ### Planned
 
@@ -37,6 +47,10 @@ Frontend, backend, database, storage, testing, and deployment (TBD)
 - TypeScript
 - Object storage
 - Continuous integration and deployment
+#### Specifics
+- Design and Implement first persistent 'Entry" domain entity
+- Add database schema migrations
+- Implement repo tests
 
 ## Architecture
 

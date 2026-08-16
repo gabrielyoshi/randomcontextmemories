@@ -4,6 +4,26 @@ Implementation challenges, lessons learned, design changes, and debugging outcom
 
 Routine tasks are tracked on GitHub Issues and Git commits
 
+## 2026-08-16 - PostgreSQL integration
+
+### Completed
+
+- Added Spring Data JPA and PostgreSQL JDBC driver
+- Configured Spring Boot datasource settings using environment variables
+- Connected backend to local PostgreSQL Docker service
+- Enabled Hibernate schema validation
+- Disabled Open EntityManager in View
+- Verified HikariCP established database connection
+- Confirmed 'GET /api/health' still returns HTTP 200
+- Ran Maven test suite successfully
+
+### Lessons
+
+- Adding JPA activates Spring Boot's datasource auto-config
+- Maven and Spring Boot do not auto load the root '.env' file.
+- Environment variables must be exported before running backend 
+- 
+
 ## 2026-08-14 - Project Initialization
 
 ### Work Completed
