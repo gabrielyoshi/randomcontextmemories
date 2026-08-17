@@ -28,14 +28,14 @@ Frontend, backend, database, storage, testing, and deployment
 - Frontend, object storage, and deployment: TBD
 
 ### Implemented
-- Java 21
-- Spring Boot
-- Maven
-- PostgreSQL 18.4
-- Docker and Docker Compose
-- JUnit
+- Backend: Java 21, Spring Boot, and Spring Web MVC
+- Persistence: Spring Data JPA and Hibernate
+- Database: PostgreSQL 18.4
+- Schema migrations: Flyway
+- Infrastructure: Docker and Docker Compose
+- Build and testing: Maven, JUnit, MockMvc, and Spring Data JPA integration tests
+- Version control: Git and GitHub
 - Spring MockMvc
-- Git and GitHub
 - Configured PostgreSQL for local development with Docker Compose
 - Connected Spring Boot to PostgreSQL through Spring Data JPA
 - Configured database credentials through environment variables
@@ -43,10 +43,10 @@ Frontend, backend, database, storage, testing, and deployment
 
 ### Planned
 
-- React
-- TypeScript
-- Object storage
+- Frontend: React and TypeScript
+- Object storage for image and video attachments
 - Continuous integration and deployment
+
 #### Specifics
 - Design and Implement first persistent 'Entry" domain entity
 - Add database schema migrations
@@ -90,12 +90,17 @@ Completed:
 - Added environment-based local database configuration
 - Added persistent PostgreSQL volume and container health check
 - Verified database, application user, authentication, and SQL execution
+- Connected Spring Boot to PostgreSQL through Spring Data JPA and HikariCP
+- Added Flyway for version-controlled database migrations
+- Implemented first JPA-managed Entry entity
+- Added PostgreSQL integration test for saving and retrieving entries and rollback
 
 Next:
 
-- Connect Spring Boot to PostgreSQL through JDBC and Spring Data JPA
-- Introduce version-controlled database migrations
-- Add first persistent domain entity
+- Add application service for entry operations
+- Implement REST endpoints for creating and retrieving entries
+- Add request validation and API error handling
+- Add service and controller tests
 
 ## Roadmap
 Planned milestones include:
