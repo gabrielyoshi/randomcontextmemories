@@ -4,6 +4,27 @@ Implementation challenges, lessons learned, design changes, and debugging outcom
 
 Routine tasks are tracked on GitHub Issues and Git commits
 
+## 2026-08-17 - Entry persistence
+
+### Completed
+
+- Added Flyway integration to track/manage db schema
+- Created migration V1__create_entries_table.sql
+- Added first managed entries database table
+- Created JPA-managed Entry entity
+- Added EntryRepository using Spring Data JPA
+- Added Spring Boot JPA test module
+- Added repository integration test using real PostgreSQL datasource
+- Verified entries can be inserted and retrieved by ID
+- Confirmed repo test transactions roll back
+- Ran complete Maven test suite successfully
+
+### Lessons
+
+- Flyway migrations offer version-controlled history of db schema changes
+- Later schema changes require new migration files
+- JPA entities must match Flyway database schema when Hibernate validation is enabled.
+
 ## 2026-08-16 - PostgreSQL integration
 
 ### Completed
@@ -22,7 +43,6 @@ Routine tasks are tracked on GitHub Issues and Git commits
 - Adding JPA activates Spring Boot's datasource auto-config
 - Maven and Spring Boot do not auto load the root '.env' file.
 - Environment variables must be exported before running backend 
-- 
 
 ## 2026-08-14 - Project Initialization
 
